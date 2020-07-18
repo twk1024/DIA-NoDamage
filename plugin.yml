@@ -1,5 +1,6 @@
 name: DIA-NoDomage
 author: twk1024
 api: 3.0.0
+main: dokidia\NoDamage
 version: 0.0.1
 website: http://diamc.kr/
