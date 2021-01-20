@@ -12,9 +12,16 @@ class NoDamage extends PluginBase implements Listener {
       public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
-  
-      public function NoDamage(EntityDamageEvent $damage){
-        
-       $damage->setCancelled(true);
+      
+      public function NoDamage(EntityDamageEvent $event){
+        $player = $event->getPlayer();
+            
+       if($player->isOp())
+       {
+             $damage->setCancelled(true);
+             $player->sendMessage("Damage Cancelled");
+       } else {
+             $damage->setCancelled(false);
+             $player->sendMessage("Damage Hasn't Cancelled");
       }
 }
