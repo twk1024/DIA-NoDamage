@@ -19,9 +19,6 @@ class NoDamage extends PluginBase implements Listener {
        if($player->isOp())
        {
              $damage->setCancelled(true);
-             $player->sendMessage("Damage Cancelled");
-       } else {
-             $damage->setCancelled(false);
-             $player->sendMessage("Damage Hasn't Cancelled");
-      }
+             // $player->sendMessage("Damage Cancelled");
+       }
 }
